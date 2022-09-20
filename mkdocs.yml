@@ -2,10 +2,12 @@ site_name: SpaceDot's Obsidian Notes
 site_url: https://acubesat.gitlab.io/documentation/obsidian
 site_dir: public
 docs_dir: ./docs
+
 theme:
   name: material
   palette:
     scheme: slate
+
 # Built-in extensions.
 markdown_extensions:
   - footnotes # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
@@ -19,6 +21,7 @@ markdown_extensions:
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - toc:
     permalink: true # https://python-markdown.github.io/extensions/toc/
+
 # Community plugins.
 plugins:
   - search # https://www.mkdocs.org/user-guide/configuration/#search
