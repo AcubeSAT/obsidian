@@ -1,0 +1,4 @@
+site_name: SpaceDot's Obsidian Notes
+site_url: https://acubesat.gitlab.io/documentation/obsidian
+site_dir: public
+docs_dir: ./docs
