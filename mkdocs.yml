@@ -2,3 +2,7 @@ site_name: SpaceDot's Obsidian Notes
 site_url: https://acubesat.gitlab.io/documentation/obsidian
 site_dir: public
 docs_dir: ./docs
+theme:
+  name: material
+  palette:
+    scheme: slate
