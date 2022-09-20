@@ -20,7 +20,7 @@ markdown_extensions:
   - pymdownx.emoji # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - toc:
-    permalink: true # https://python-markdown.github.io/extensions/toc/
+      permalink: true # https://python-markdown.github.io/extensions/toc/
 
 # Community plugins.
 plugins:
