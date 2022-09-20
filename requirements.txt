@@ -2,3 +2,5 @@
 mkdocs>=1.1.2
 # Material theme.
 mkdocs-material>=8.1.7
+# (Obsidian) Wikilinks support for mkdocs.
+mkdocs-roamlinks-plugin>=0.1.3

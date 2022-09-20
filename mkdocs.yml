@@ -6,7 +6,7 @@ theme:
   name: material
   palette:
     scheme: slate
-# Extensions.
+# Built-in extensions.
 markdown_extensions:
   - footnotes # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - attr_list # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
@@ -19,3 +19,7 @@ markdown_extensions:
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - toc:
     permalink: true # https://python-markdown.github.io/extensions/toc/
+# Community plugins.
+plugins:
+  - search # https://www.mkdocs.org/user-guide/configuration/#search
+  - roamlinks # https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
