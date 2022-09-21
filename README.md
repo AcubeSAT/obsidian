@@ -54,6 +54,10 @@ Community plugins:
 
 ### Webpage
 
+![search-example][search-example]
+
+[search-example]: assets/example-search.png "Example search bar layout"
+
 #### MkDocs
 
 Built-in Markdown extensions:
