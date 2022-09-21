@@ -53,3 +53,24 @@ Community plugins:
 - [deathau/sliding-panes-obsidian: Andy Matuschak Mode as a plugin (github.com)](https://github.com/deathau/sliding-panes-obsidian)
 
 ### Webpage
+
+#### MkDocs
+
+Built-in Markdown extensions:
+
+- [footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
+- [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists)
+- [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)
+- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/)
+- [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/)
+- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/)
+- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)
+- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)
+- [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+- [toc](https://python-markdown.github.io/extensions/toc/)
+
+Community plugins:
+
+- [search](https://www.mkdocs.org/user-guide/configuration/#search)
+- [roamlinks](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin)
+- [exclude:](https://github.com/apenwarr/mkdocs-exclude)
