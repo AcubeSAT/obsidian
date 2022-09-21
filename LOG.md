@@ -32,7 +32,7 @@
 
 - plugin: [enable] Kanban
 
-- plugin: [install] [denolehov/obsidian-git: Backup your Obsidian.md vault with git (github.com)](https://github.com/denolehov/obsidian-git) TODO: link with [AcubeSAT / Documentation / Obsidian · GitLab](https://gitlab.com/acubesat/documentation/obsidian)
+- plugin: [install] [denolehov/obsidian-git: Backup your Obsidian.md vault with git (github.com)](https://github.com/denolehov/obsidian-git)
 
 - plugin: [enable] Obsidian Git
 
