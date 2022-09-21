@@ -8,7 +8,7 @@
 
 - plugin: [enable] Advanced Tables
 
-- plugin: [install] [tgrosinger/advanced-tables-obsidian: Improved table navigation, formatting, and manipulation in Obsidian.md (github.com)](https://github.com/tgrosinger/advanced-tables-obsidian)
+- plugin: [install] [GitHub - zolrath/obsidian-auto-link-title: Automatically fetch the titles of pasted links](https://github.com/zolrath/obsidian-auto-link-title)
 
 - plugin: [enable] Auto Link Title
 
