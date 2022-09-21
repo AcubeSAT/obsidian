@@ -26,3 +26,6 @@ markdown_extensions:
 plugins:
   - search # https://www.mkdocs.org/user-guide/configuration/#search
   - roamlinks # https://github.com/Jackiexiao/mkdocs-roamlinks-plugin
+  - exclude: # https://github.com/apenwarr/mkdocs-exclude
+      glob:
+        - Kanban/*
