@@ -12,7 +12,7 @@
 
 - plugin: [enable] Auto Link Title
 
-- plugin: [install] [hans/obsidian-citation-plugin: Obsidian plugin which integrates your academic reference manager with the Obsidian editor. Search your references from within Obsidian and automatically create and reference literature notes for papers and books. (github.com)](https://github.com/hans/obsidian-citation-plugin) TODO: set up (settings + Zotero library)
+- plugin: [install] [hans/obsidian-citation-plugin: Obsidian plugin which integrates your academic reference manager with the Obsidian editor. Search your references from within Obsidian and automatically create and reference literature notes for papers and books. (github.com)](https://github.com/hans/obsidian-citation-plugin) ~~TODO~~DONE: set up (settings + Zotero library)
 
 - plugin: [enable] Citations
 
@@ -20,7 +20,7 @@
 
 - plugin: [enable] Emoji Toolbar
 
-- plugin: [install] [zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian (github.com)](https://github.com/zsviczian/obsidian-excalidraw-plugin) TODO: set up (settings config dir)
+- plugin: [install] [zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian (github.com)](https://github.com/zsviczian/obsidian-excalidraw-plugin) ~~TODO~~DONE: set up (settings config dir)
 
 - plugin: [enable] Excalidraw
 
@@ -28,7 +28,7 @@
 
 - plugin: [enable] Hover Editor
 
-- plugin: [install] [mgmeyers/obsidian-kanban: Create markdown-backed Kanban boards in Obsidian. (github.com)](https://github.com/mgmeyers/obsidian-kanban) TODO: set up default Kanban board(s) (e.g.: `backlog | todo | in progress | done; archive`)
+- plugin: [install] [mgmeyers/obsidian-kanban: Create markdown-backed Kanban boards in Obsidian. (github.com)](https://github.com/mgmeyers/obsidian-kanban) ~~TODO~~DONE: set up default Kanban board(s) (e.g.: `backlog | todo | in progress | done; archive`)
 
 - plugin: [enable] Kanban
 
