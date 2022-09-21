@@ -57,3 +57,15 @@
 - plugin: [config] Kanban - select `Kanban/` as default directory
 
 - plugin: [config] Excalidraw - select `Excalidraw/` as default directory
+
+- plugin: [config] Citation - select `References/` as default directory
+
+- plugin: [config] Citation - add the exported [Zotero library](https://www.zotero.org/groups/4786779/spacedot) `CSL-JSON` `Citation database path` (see [this](https://retorque.re/zotero-better-bibtex/installation/))
+
+- Change hotkeys: `Settings` -> `Hotkeys`
+
+- hotkey: [delete] `Auto Link Title: Paste URL and auto fetch title`
+
+- hotkey: [delete] `Excalidraw: Toggle Text Element edit RAW/PREVIEW`
+
+- hotkey: [delete] `Excalidraw: Copy markdown link for selected element to clipboard`
