@@ -53,3 +53,7 @@
 - theme: [install] [colineckert/obsidian-things: An Obsidian theme inspired by the beautifully-designed app, Things. (github.com)](https://github.com/colineckert/obsidian-things)
 
 - theme: [select] Things
+
+- plugin: [config] Kanban - select `Kanban/` as default directory
+
+- plugin: [config] Excalidraw - select `Excalidraw/` as default directory
