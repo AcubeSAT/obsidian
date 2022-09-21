@@ -29,3 +29,4 @@ plugins:
   - exclude: # https://github.com/apenwarr/mkdocs-exclude
       glob:
         - Kanban/*
+        - Excalidraw/*
