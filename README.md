@@ -172,19 +172,19 @@ Community plugins:
 
 Built-in Markdown extensions:
 
-- [footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
-- [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists)
-- [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)
-- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/)
-- [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/)
-- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/)
-- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)
-- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)
-- [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
-- [toc](https://python-markdown.github.io/extensions/toc/)
+- [footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/): Define, reference and render footnotes (\[^1\] Markdown-esque syntax)
+- [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists): Add HTML attributes and CSS classes to almost every Markdown inline- and block-level element
+- [pymdownx.highlight](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/): Syntax highlighting and configuration
+- [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): Nested fences (\`\`\` Markdown blocks), custom fences (e.g. for rendering flowcharts), etc.
+- [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/): Good-looking collapsible elements that hide their content leveraging the HTML `<details><summary>` tags
+- [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): Auto-linking, shorthand links, mentions, GitHub/Lab shorthands, commits, diff/compare, etc.
+- [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): Good-looking, customizable GFM-style task lists (\[ \] stuff)
+- [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): Render emojis with the good ol' `:an-emoji:` colon sytax
+- [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/): Admonitions, aka call-outs, support. Syntax used differs than the one used from the respective Obsidian plugin, should look into this
+- [toc](https://python-markdown.github.io/extensions/toc/): Table Of Contents support
 
 Community plugins:
 
-- [search](https://www.mkdocs.org/user-guide/configuration/#search)
-- [roamlinks](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin)
-- [exclude:](https://github.com/apenwarr/mkdocs-exclude)
+- [search](https://www.mkdocs.org/user-guide/configuration/#search): Search (bar) support using [lunr.js](https://lunrjs.com/)
+- [roamlinks](https://github.com/Jackiexiao/mkdocs-roamlinks-plugin): Relative linking between documents, convert Obsidian \[\[roamlinks\]\]
+- [exclude:](https://github.com/apenwarr/mkdocs-exclude): Exclude files from being built by MkDocs. Used to not build Excalidraw or Kanban Obsidian files, etc.
