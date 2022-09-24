@@ -16,7 +16,7 @@ This allows for automatically building and deploying a [website](https://acubesa
 
 ![index-example][index-example]
 
-[index-example]: assets/example-index.png "Example index page layout"
+[index-example]: assets/webpage/example-index.png "Example index page layout"
 
 ## Table of Contents
 
@@ -33,30 +33,80 @@ The repository hosts two different things: the Obsidian vault itself, and the co
 
 ### Obsidian
 
-The theme currently used is [colineckert/obsidian-things: An Obsidian theme inspired by the beautifully-designed app, Things. (github.com)](https://github.com/colineckert/obsidian-things), in `Dark` mode.
+The theme currently used is [colineckert/obsidian-things: An Obsidian theme inspired by the beautifully-designed app, Things.(https://github.com/colineckert/obsidian-things), in `Dark` mode.
 
 #### Plugins
 
 Community plugins:
 
-- [valentine195/obsidian-admonition: Adds admonition block-styled content to Obsidian.md (github.com)](https://github.com/valentine195/obsidian-admonition)
-- [tgrosinger/advanced-tables-obsidian: Improved table navigation, formatting, and manipulation in Obsidian.md (github.com)](https://github.com/tgrosinger/advanced-tables-obsidian)
-- [GitHub - zolrath/obsidian-auto-link-title: Automatically fetch the titles of pasted links](https://github.com/zolrath/obsidian-auto-link-title)
-- [hans/obsidian-citation-plugin: Obsidian plugin which integrates your academic reference manager with the Obsidian editor. Search your references from within Obsidian and automatically create and reference literature notes for papers and books. (github.com)](https://github.com/hans/obsidian-citation-plugin)
-- [oliveryh/obsidian-emoji-toolbar (github.com)](https://github.com/oliveryh/obsidian-emoji-toolbar)
-- [zsviczian/obsidian-excalidraw-plugin: A plugin to edit and view Excalidraw drawings in Obsidian (github.com)](https://github.com/zsviczian/obsidian-excalidraw-plugin)
-- [nothingislost/obsidian-hover-editor: Transform the Page Preview hover into a working editor instance (github.com)](https://github.com/nothingislost/obsidian-hover-editor)
-- [mgmeyers/obsidian-kanban: Create markdown-backed Kanban boards in Obsidian. (github.com)](https://github.com/mgmeyers/obsidian-kanban)
-- [denolehov/obsidian-git: Backup your Obsidian.md vault with git (github.com)](https://github.com/denolehov/obsidian-git)
-- [ozntel/oz-image-in-editor-obsidian: This Obsidian plugin to view Images, Transclusions, iFrames and PDF Files within the Editor without a necessity to switch to Preview. (github.com)](https://github.com/ozntel/oz-image-in-editor-obsidian)
-- [denolehov/obsidian-url-into-selection: Paste URLs into selected text "notion style" (github.com)](https://github.com/denolehov/obsidian-url-into-selection)
-- [deathau/sliding-panes-obsidian: Andy Matuschak Mode as a plugin (github.com)](https://github.com/deathau/sliding-panes-obsidian)
+[valentine195/obsidian-admonition](https://github.com/valentine195/obsidian-admonition): Adds admonition block-styled content to Obsidian
+
+![plugin-admonition][plugin-admonition]
+
+[tgrosinger/advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian): Improved table navigation, formatting, and manipulation in Obsidian
+
+![plugin-advanced-tables][plugin-advanced-tables]
+
+[GitHub - zolrath/obsidian-auto-link-title](https://github.com/zolrath/obsidian-auto-link-title): Automatically fetch the titles of pasted links
+
+![plugin-auto-link-title][plugin-auto-link-title]
+
+[hans/obsidian-citation-plugin](https://github.com/hans/obsidian-citation-plugin): Obsidian plugin which integrates your academic reference manager with the Obsidian editor. Search your references from within Obsidian and automatically create and reference literature notes for papers and books.
+
+![plugin-citation][plugin-citation]
+
+[oliveryh/obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar): Quickly search for and add emojis to your editor
+
+![plugin-emoji-toolbar][plugin-emoji-toolbar]
+
+[zsviczian/obsidian-excalidraw-plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin): A plugin to edit and view Excalidraw drawings in Obsidian
+
+![plugin-excalidraw][plugin-excalidraw]
+
+[nothingislost/obsidian-hover-editor](https://github.com/nothingislost/obsidian-hover-editor): Transform the Page Preview hover into a working editor instance
+
+![plugin-hover-editor-1][plugin-hover-editor-1]
+![plugin-hover-editor-2][plugin-hover-editor-2]
+
+[mgmeyers/obsidian-kanban](https://github.com/mgmeyers/obsidian-kanban): Create markdown-backed Kanban boards in Obsidian.
+
+![plugin-kanban][plugin-kanban]
+
+[denolehov/obsidian-git](https://github.com/denolehov/obsidian-git): Backup your Obsidian vault with git
+
+![plugin-git][plugin-git]
+
+[ozntel/oz-image-in-editor-obsidian](https://github.com/ozntel/oz-image-in-editor-obsidian): This Obsidian plugin to view Images, Transclusions, iFrames and PDF Files within the Editor without a necessity to switch to Preview.
+
+![plugin-image-in-editor][plugin-image-in-editor]
+
+[denolehov/obsidian-url-into-selection](https://github.com/denolehov/obsidian-url-into-selection): Paste URLs into selected text "notion style"
+
+![plugin-url-into-selection][plugin-url-into-selection]
+
+[deathau/sliding-panes-obsidian](https://github.com/deathau/sliding-panes-obsidian): Andy Matuschak Mode as a plugin
+
+![plugin-sliding-panes][plugin-sliding-panes]
+
+[plugin-admonition]: assets/plugins/admonition.png "Obsidian Admonition plugin"
+[plugin-advanced-tables]: assets/plugins/advanced-tables.png "Obsidian Admonition plugin"
+[plugin-auto-link-title]: assets/plugins/auto-link-title.png "Obsidian Admonition plugin"
+[plugin-citation]: assets/plugins/citation.png "Obsidian Admonition plugin"
+[plugin-emoji-toolbar]: assets/plugins/emoji-toolbar.png "Obsidian Admonition plugin"
+[plugin-excalidraw]: assets/plugins/excalidraw.png "Obsidian Admonition plugin"
+[plugin-hover-editor-1]: assets/plugins/hover-editor-1.png "Obsidian Admonition plugin"
+[plugin-hover-editor-2]: assets/plugins/hover-editor-2.png "Obsidian Admonition plugin"
+[plugin-kanban]: assets/plugins/kanban.png "Obsidian Admonition plugin"
+[plugin-git]: assets/plugins/git.png "Obsidian Admonition plugin"
+[plugin-image-in-editor]: assets/plugins/image-in-editor.png "Obsidian Admonition plugin"
+[plugin-url-into-selection]: assets/plugins/url-into-selection.png "Obsidian Admonition plugin"
+[plugin-sliding-panes]: assets/plugins/sliding-panes.png "Obsidian Admonition plugin"
 
 ### Webpage
 
 ![search-example][search-example]
 
-[search-example]: assets/example-search.png "Example search bar layout"
+[search-example]: assets/webpage/example-search.png "Example search bar layout"
 
 #### MkDocs
 
