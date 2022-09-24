@@ -16,6 +16,7 @@ markdown_extensions:
   - pymdownx.superfences # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
   - pymdownx.details # https://facelessuser.github.io/pymdown-extensions/extensions/details/
   - pymdownx.magiclink # https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
+  - pymdownx.saneheaders # https://facelessuser.github.io/pymdown-extensions/extensions/saneheaders/
   - pymdownx.tasklist # https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
   - pymdownx.emoji # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/

@@ -178,6 +178,7 @@ Built-in Markdown extensions:
 - [pymdownx.superfences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/): Nested fences (\`\`\` Markdown blocks), custom fences (e.g. for rendering flowcharts), etc.
 - [pymdownx.details](https://facelessuser.github.io/pymdown-extensions/extensions/details/): Good-looking collapsible elements that hide their content leveraging the HTML `<details><summary>` tags
 - [pymdownx.magiclink](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/): Auto-linking, shorthand links, mentions, GitHub/Lab shorthands, commits, diff/compare, etc.
+- [pymdownx.saneheaders](https://facelessuser.github.io/pymdown-extensions/extensions/saneheaders/): Only recognize as markdown headers text where the hashtag is separated with the text (i.e. `# is a header`, `#is not a header`)
 - [pymdownx.tasklist](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/): Good-looking, customizable GFM-style task lists (\[ \] stuff)
 - [pymdownx.emoji](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/): Render emojis with the good ol' `:an-emoji:` colon sytax
 - [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/): Admonitions, aka call-outs, support. Syntax used differs than the one used from the respective Obsidian plugin, should look into this
