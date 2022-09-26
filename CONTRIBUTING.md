@@ -24,6 +24,7 @@ Check `Guides/`!
 2. Feel free to use all Obsidian plugins installed liberally. Some things are still missing, for example the Obsidian Admonitions plugin uses different syntax than the MkDocs plugin. In these cases, just use Obsidian syntax and I'll be patching the MkDocs integration here and there to have more things rendered
 3. Currently, the Markdown files inside `docs/` (aka the Obsidian Vault) that reside in `Excalidraw` and in `Kanban` are excluded from the website generation using `mkdocs-exclude`. If you want to exclude anything else, `mkdocs.yml` is the place to check
 4. If you don't want to add notes but instead want to change something MkDocs-related, or download additional Obsidian plugins or further configure Obsidian, feel free to open a descriptive MR. If you want to further configure Obsidian, please make sure to edit the `LOG.md` appropriately
+5. Make sure that large-ish, non-Markdown files are tracked by [LFS](https://git-lfs.github.com/). For now, I've added LFS support for `*.pdf`, `*.png` and `*.jpg` files.
 
 ## General
 
