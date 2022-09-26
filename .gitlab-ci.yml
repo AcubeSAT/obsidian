@@ -9,7 +9,7 @@ pages:
     # --strict aborts the build on any warnings.
     # --verbose enables verbose output so that it's easier to see what mkdocs is doing.
     # neither --strict nor --verbose are necessary if you choose not to use them.
-    - mkdocs build --strict --verbose
+    - mkdocs build --verbose
   artifacts:
     paths:
       - public
