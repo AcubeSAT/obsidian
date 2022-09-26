@@ -69,3 +69,7 @@
 - hotkey: [delete] `Excalidraw: Toggle Text Element edit RAW/PREVIEW`
 
 - hotkey: [delete] `Excalidraw: Copy markdown link for selected element to clipboard`
+
+- hotkey: [add] `Templates: Insert template` -> `Ctrl` + `T`
+
+- plugin: [config] Templates - select `Templates/` as default directory
