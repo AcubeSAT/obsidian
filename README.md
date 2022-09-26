@@ -30,6 +30,7 @@ This allows for automatically building and deploying a [website](https://acubesa
 ## Features
 
 The repository hosts two different things: the Obsidian vault itself, and the configuration related to generating and deploying the webpage.
+Check `Guides/`!
 
 ### Obsidian
 
