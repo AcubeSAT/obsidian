@@ -64,6 +64,8 @@ After running the main YAMCS instance, YAMCS Web Interface will be initialized a
 
 The web page opened at localhost:8090 consists of a sidenav and a home dashboard. Through the contents of the sidenav menu data gets handled.
 
+![Sidenav](assets/yamcs/sidenav.png)  
+
 #### Links
 
 Four DataLinks exist in YAMCS instance, configured in the /src/main/yamcs/etc/yamcs.myproject.yaml file. Three DataLinks for receiving Telemetry from three different locations:
@@ -84,12 +86,16 @@ The **color** of the circle in front of every DataLink refers to the **status** 
 - Red: An error in the connection exists.
 - Grey: Link is disabled.
 
+![Data-Links](assets/yamcs/links.png)
+
 #### Telemetry
 
 As far as Telemetry is concerned the Packets and Parameters sections provide useful information regarding the incoming packets.
 
 - **Packets**
   In this section all TM packets can be visualized once received via the DataLinks. They are classified based on their reception time.
+
+  ![Packets](assets/yamcs/packets.png)
 
 - **Parameters**
   Contains a list of all parameters defined in the YAMCS project. The values of
@@ -187,6 +193,8 @@ Based on the desirable TC to be sent, the user should navigate to the respective
 The procedure for **sending a TC** is the following:
 
 1. Locate the sub-folder of the TC based on the Table IV.
+
+![Commands](assets/yamcs/commands.png)
 2. Select the values of the configurable Arguments.
 3. Press Send.
 
