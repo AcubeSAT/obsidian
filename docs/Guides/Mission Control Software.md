@@ -195,6 +195,7 @@ The procedure for **sending a TC** is the following:
 1. Locate the sub-folder of the TC based on the Table IV.
 
 ![Commands](assets/yamcs/commands.png)
+
 2. Select the values of the configurable Arguments.
 3. Press Send.
 
