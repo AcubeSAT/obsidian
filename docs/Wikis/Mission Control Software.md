@@ -64,6 +64,8 @@ After running the main YAMCS instance, YAMCS Web Interface will be initialized a
 
 The web page opened at localhost:8090 consists of a sidenav and a home dashboard. Through the contents of the sidenav menu data gets handled.
 
+![Sidenav](assets/yamcs/sidenav.png)  
+
 #### Links
 
 Four DataLinks exist in YAMCS instance, configured in the /src/main/yamcs/etc/yamcs.myproject.yaml file. Three DataLinks for receiving Telemetry from three different locations:
@@ -84,6 +86,8 @@ The **color** of the circle in front of every DataLink refers to the **status** 
 - Red: An error in the connection exists.
 - Grey: Link is disabled.
 
+![Data-Links](assets/yamcs/links.png)
+
 #### Telemetry
 
 As far as Telemetry is concerned the Packets and Parameters sections provide useful information regarding the incoming packets.
@@ -91,81 +95,83 @@ As far as Telemetry is concerned the Packets and Parameters sections provide use
 - **Packets**
   In this section all TM packets can be visualized once received via the DataLinks. They are classified based on their reception time.
 
+  ![Packets](assets/yamcs/packets.png)
+
 - **Parameters**
   Contains a list of all parameters defined in the YAMCS project. The values of
   parameters get updated based on received TMs. The parameters are grouped into
   five sub-folders:
 
-      - **AcubeSAT**: All OBC and ADCS parameters that will be used during the
+    - **AcubeSAT**: All OBC and ADCS parameters that will be used during the
 
-  Environmental Testing are stored in this sub-folder. Their values get updated
-  with reception of value-reporting TMs such as:
-  _ TM[3,10]: Housekeeping Parameter Report
-  _ TM[3,25]: Housekeeping Parameter Report \* TM[20,2]: Parameter Value Report
+Environmental Testing are stored in this sub-folder. Their values get updated
+with reception of value-reporting TMs such as:
+_ TM[3,10]: Housekeeping Parameter Report
+_ TM[3,25]: Housekeeping Parameter Report \* TM[20,2]: Parameter Value Report
 
-      An overview of all Campaign parameters and their IDs is shown in Table II
+An overview of all Campaign parameters and their IDs is shown in Table II
 
-  and Table III.
+and Table III.
 
-      ADCS Parametrs:
-      Parameter ID | Description
-      --- | ---
-      1013 | Magnetometer Raw Values x
-      1014 | Magnetometer Raw Values y
-      1015 | Magnetometer Raw Values z
-      1016 | Magnetometer Frequency
-      1017 | Magnetometer cycle count on x
-      1018 | Magnetometer cycle count on y
-      1019 | Magnetometer cycle count on z
-      1020 | Magnetometer self-test register
-      1043 | Gyro measurements x
-      1044 | Gyro measurements y
-      1045 | Gyro measurements z
-      1089 | Gyroscope X temperature
-      1090 | Gyroscope Y temperature
-      1091 | Gyroscope Z temperature
-      1092 | ADCS board Temperature 1
-      1093 | ADCS board Temperature 2
-      1158 | Magnetometer axis x sign
-      1159 | Magnetometer axis y sign
-      1160 | Magnetometer axis z sign
-      1164 | Gyro axis x sign
-      1165 | Gyro axis y sign
-      1166 | Gyro axis z sign
-      1189 | Gyro bias x
-      1190 | Gyro bias y
-      1191 | Gyro bias z
-      1218 | ADCS MCU temperature
-      1220 | ADCS MCU boot counter
-      1221 | ADCS MCU On-Board Time
-      1224 | ADCS MCU Systick
+  ADCS Parametrs:
+  Parameter ID | Description
+  --- | ---
+  1013 | Magnetometer Raw Values x
+  1014 | Magnetometer Raw Values y
+  1015 | Magnetometer Raw Values z
+  1016 | Magnetometer Frequency
+  1017 | Magnetometer cycle count on x
+  1018 | Magnetometer cycle count on y
+  1019 | Magnetometer cycle count on z
+  1020 | Magnetometer self-test register
+  1043 | Gyro measurements x
+  1044 | Gyro measurements y
+  1045 | Gyro measurements z
+  1089 | Gyroscope X temperature
+  1090 | Gyroscope Y temperature
+  1091 | Gyroscope Z temperature
+  1092 | ADCS board Temperature 1
+  1093 | ADCS board Temperature 2
+  1158 | Magnetometer axis x sign
+  1159 | Magnetometer axis y sign
+  1160 | Magnetometer axis z sign
+  1164 | Gyro axis x sign
+  1165 | Gyro axis y sign
+  1166 | Gyro axis z sign
+  1189 | Gyro bias x
+  1190 | Gyro bias y
+  1191 | Gyro bias z
+  1218 | ADCS MCU temperature
+  1220 | ADCS MCU boot counter
+  1221 | ADCS MCU On-Board Time
+  1224 | ADCS MCU Systick
 
-      OBC Parameters:
-      Parameter ID | Description
-      --- | ---
-      5000 | OBDH board Temperature 1
-      5001 | OBDH board Temperature 2
-      5002 | OBC MCU temperature
-      5004 | OBC MCU boot counter
-      5012 | OBC On-Board Time
-      5014 | OBC NAND currently used memory partition
-      5017 | OBC MCU Systick
-      5018 | CAN bus 1 load
-      5019 | CAN bus 2 load
-      5020 | Which CAN bus active
-      5023 | OBC NAND FLASH threshold
-      5024 | OBC MRAM threshold
-      5025 | OBC NAND FLASH ON
-      5026 | OBC MRAM ON
+  OBC Parameters:
+  Parameter ID | Description
+  --- | ---
+  5000 | OBDH board Temperature 1
+  5001 | OBDH board Temperature 2
+  5002 | OBC MCU temperature
+  5004 | OBC MCU boot counter
+  5012 | OBC On-Board Time
+  5014 | OBC NAND currently used memory partition
+  5017 | OBC MCU Systick
+  5018 | CAN bus 1 load
+  5019 | CAN bus 2 load
+  5020 | Which CAN bus active
+  5023 | OBC NAND FLASH threshold
+  5024 | OBC MRAM threshold
+  5025 | OBC NAND FLASH ON
+  5026 | OBC MRAM ON
 
 
-      - **pus**: Contains all the packet header parameters, both primary and secondary,such as *time,sequence count, message type* and *service type*. Their values get updated with the reception of **every TM**, since all incoming packets contain the headers.
+  - **pus**: Contains all the packet header parameters, both primary and secondary,such as *time,sequence count, message type* and *service type*. Their values get updated with the reception of **every TM**, since all incoming packets contain the headers.
 
-      - **pus‐not‐used** : Contains the parameters transmitted in service** ST[12]**. Their values get updated with reception **ΤΜ[12,8]**: *Report Parameter Monitoring Definitions* and **ΤΜ[12,9]**: *Parameter Monitoring Definition Report* (both will not be used during the Testing).
+  - **pus‐not‐used** : Contains the parameters transmitted in service** ST[12]**. Their values get updated with reception **ΤΜ[12,8]**: *Report Parameter Monitoring Definitions* and **ΤΜ[12,9]**: *Parameter Monitoring Definition Report* (both will not be used during the Testing).
 
-      - **pus‐verification**: Contains the parameters transmitted in service **ST[01]**.Their values get updated with reception **TM[1,1]**: *Successful Acceptance Verification Report* and **TM[1,2]**: *Failed Acceptance Verification Report* (both will not be used during the Testing).
+  - **pus‐verification**: Contains the parameters transmitted in service **ST[01]**.Their values get updated with reception **TM[1,1]**: *Successful Acceptance Verification Report* and **TM[1,2]**: *Failed Acceptance Verification Report* (both will not be used during the Testing).
 
-      - **YAMCS**: Contains parameters regarding the state of the links and the functionality of the instance. These parameters will not be used.
+  - **YAMCS**: Contains parameters regarding the state of the links and the functionality of the instance. These parameters will not be used.
 
 All **data types** of the parameters can be found in the /src/main/yamcs/mdb/dt.xml
 file in yamcs-instance project.
@@ -187,6 +193,9 @@ Based on the desirable TC to be sent, the user should navigate to the respective
 The procedure for **sending a TC** is the following:
 
 1. Locate the sub-folder of the TC based on the Table IV.
+
+![Commands](assets/yamcs/commands.png)
+
 2. Select the values of the configurable Arguments.
 3. Press Send.
 
