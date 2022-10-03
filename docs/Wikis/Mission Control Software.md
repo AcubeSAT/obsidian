@@ -51,7 +51,7 @@ To simply start the main YAMCS instance, run the following command:
 mvn yamcs:run
 ```
 
-In case you want to enable hot-backups (meaning backing up data while YAMCS is running) , you need to start the instance by enabling JMX with the command:
+In case you want to enable hot-backups (meaning backing up data **while** YAMCS is running) , you need to start the instance by enabling JMX with the command:
 
 ```bash
 mvn yamcs:run -Dyamcs.jvmArgs="-Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.mxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
@@ -67,7 +67,7 @@ The web page opened at localhost:8090 consists of a sidenav and a home dashboard
 
 #### Links
 
-Four DataLinks exist in YAMCS instance, configured in the /src/main/yamcs/etc/yamcs.myproject.yaml file. Three DataLinks for receiving Telemetry from three different locations:
+Four Data Links exist in YAMCS instance, configured in the /src/main/yamcs/etc/yamcs.myproject.yaml file. Three Data Links for receiving Telemetry from three different locations:
 
 - ADCS-UART, listening to port 10016
 - OBC-UART, listening to port 10015
@@ -77,8 +77,8 @@ and one for transmitting Telecommands:
 
 - tcp-out, listening to port 10025
 
-All DataLinks listen to different TCP sockets and require an established connection to exchange data with the Board.
-The **color** of the circle in front of every DataLink refers to the **status** of the DataLink:
+All Data Links listen to different TCP sockets and require an established connection to exchange data with the Board.
+The **color** of the circle in front of every DataLink refers to the **status** of the Data Link:
 
 - Green: Connection has been established.
 - Light Green: Packets are being exchanged.
@@ -91,28 +91,24 @@ The **color** of the circle in front of every DataLink refers to the **status** 
 
 As far as Telemetry is concerned the Packets and Parameters sections provide useful information regarding the incoming packets.
 
-- **Packets**
-  In this section all TM packets can be visualized once received via the DataLinks. They are classified based on their reception time.
+##### Packets
+In this section all TM packets can be visualized once received via the DataLinks. They are classified based on their reception time.
 
   ![Packets](packets.png)
 
-- **Parameters**
-  Contains a list of all parameters defined in the YAMCS project. The values of
-  parameters get updated based on received TMs. The parameters are grouped into
-  five sub-folders:
+##### Parameters
+Contains a list of all parameters defined in the YAMCS project. The values of
+parameters get updated based on received TMs. The parameters are grouped into
+five sub-folders:
 
-    - **AcubeSAT**: All OBC and ADCS parameters that will be used during the
+- **AcubeSAT**: All OBC and ADCS parameters that will be used during the Environmental Testing are stored in this sub-folder. Their values get updated with reception of value-reporting TMs such as:
+	- TM\[3,10\]: Housekeeping Parameter Report
+	- TM\[3,25\]: Housekeeping Parameter Report 
+	- TM\[20,2\]: Parameter Value Report
 
-Environmental Testing are stored in this sub-folder. Their values get updated
-with reception of value-reporting TMs such as:
-_ TM[3,10]: Housekeeping Parameter Report
-_ TM[3,25]: Housekeeping Parameter Report \* TM[20,2]: Parameter Value Report
+An overview of all Campaign parameters and their IDs is shown is shown in the following Tables.
 
-An overview of all Campaign parameters and their IDs is shown in Table II
-
-and Table III.
-
-  ADCS Parametrs:
+ADCS Parametrs:
   Parameter ID | Description
   --- | ---
   1013 | Magnetometer Raw Values x
@@ -145,7 +141,7 @@ and Table III.
   1221 | ADCS MCU On-Board Time
   1224 | ADCS MCU Systick
 
-  OBC Parameters:
+OBC Parameters:
   Parameter ID | Description
   --- | ---
   5000 | OBDH board Temperature 1
@@ -163,14 +159,13 @@ and Table III.
   5025 | OBC NAND FLASH ON
   5026 | OBC MRAM ON
 
+- **pus**: Contains all the packet header parameters, both primary and secondary,such as *time,sequence count, message type* and *service type*. Their values get updated with the reception of **every TM**, since all incoming packets contain the headers.
 
-  - **pus**: Contains all the packet header parameters, both primary and secondary,such as *time,sequence count, message type* and *service type*. Their values get updated with the reception of **every TM**, since all incoming packets contain the headers.
+- **pus‐not‐used** : Contains the parameters transmitted in service **ST[12]**. Their values get updated with reception **ΤΜ[12,8]**: *Report Parameter Monitoring Definitions* and **ΤΜ[12,9]**: *Parameter Monitoring Definition Report* (both will not be used during the Testing).
 
-  - **pus‐not‐used** : Contains the parameters transmitted in service** ST[12]**. Their values get updated with reception **ΤΜ[12,8]**: *Report Parameter Monitoring Definitions* and **ΤΜ[12,9]**: *Parameter Monitoring Definition Report* (both will not be used during the Testing).
+- **pus‐verification**: Contains the parameters transmitted in service **ST[01]**.Their values get updated with reception **TM[1,1]**: *Successful Acceptance Verification Report* and **TM[1,2]**: *Failed Acceptance Verification Report* (both will not be used during the Testing).
 
-  - **pus‐verification**: Contains the parameters transmitted in service **ST[01]**.Their values get updated with reception **TM[1,1]**: *Successful Acceptance Verification Report* and **TM[1,2]**: *Failed Acceptance Verification Report* (both will not be used during the Testing).
-
-  - **YAMCS**: Contains parameters regarding the state of the links and the functionality of the instance. These parameters will not be used.
+- **YAMCS**: Contains parameters regarding the state of the links and the functionality of the instance. These parameters will not be used.
 
 All **data types** of the parameters can be found in the /src/main/yamcs/mdb/dt.xml
 file in yamcs-instance project.
@@ -191,21 +186,20 @@ Based on the desirable TC to be sent, the user should navigate to the respective
 
 The procedure for **sending a TC** is the following:
 
-1. Locate the sub-folder of the TC based on the Table IV.
+1. Locate the sub-folder of the TC based on the Table above.
+2. 2. Select the values of the configurable Arguments.
+3. Press Send.
 
 ![Commands](commands.png)
 
-2. Select the values of the configurable Arguments.
-3. Press Send.
-
 After sending a TC, a "Resend this Command" option appears, giving the user the ability to re-send the same TC without doing the whole procedure all over again and thus saves time.
 
-Some ECSS TCs can have multiple parameters as arguments, for example those requesting the value of N parameters, where N is user defined each time. However, YAMCS does not support this functionality, so as a workaround these TCs have been configured to always send a predefined number of parameters, lets say X. If the operator needs to get exactly X parameters, they just fill their respective ids. If however they need only 3, they must input N=3 in the corresponding field, select the desired 3 parameters and fill the rest randomly, as OBC will not really care and simply discard them.
+Some ECSS TCs can have multiple parameters as arguments, for example those requesting the value of N parameters, where N is user defined each time. However, YAMCS does not support this functionality, so as a workaround these TCs have been configured to **always** send a predefined number of parameters, lets say X. If the operator needs to get exactly X parameters, they just fill their respective ids. If however they need only 3, they must input N=3 in the corresponding field, select the desired 3 parameters and fill the rest randomly, as OBC will not really care and simply discard them.
 
 #### TM-TC Definitions
 
 - **Housekeeping Structures**
-  For the execution of the service **ST[03]**: _Housekeeping_, 4 Housekeeping Structures have been implemented, complying with the _On Board Software_ project. Each structure contains a group of parameters which were differentiated by their sampling frequency and subsystem. For the creation of the groups, regarding the number of parameters included in each one of them, memory limits were considered. These structures are **static and pre‐configured** based on the needs of the Campaign. In case new Housekeeping Structures need to be added, the pus.xml file must be modified The final Housekeeping Structures as well as their sampling frequency and structure identification number are shown in Table V.
+  For the execution of the service **ST[03]**: _Housekeeping_, 4 Housekeeping Structures have been implemented, complying with the _On Board Software_ project. Each structure contains a group of parameters which were differentiated by their sampling frequency and subsystem. For the creation of the groups, regarding the number of parameters included in each one of them, memory limits were considered. These structures are **static and pre‐configured** based on the needs of the Campaign. In case new Housekeeping Structures need to be added, the pus.xml file must be modified The final Housekeeping Structures as well as their sampling frequency and structure identification number are shown in the Table bellow.
 
 | Structure               | Structure ID | Sampling Frequency |
 | ----------------------- | ------------ | ------------------ |
@@ -271,7 +265,7 @@ List Of Parameters included in each structure:
   9. GyroBiasZ
 
 - **Default TCs**
-  As mentioned above not all TCs have configurable Arguments. Some pre-made TCs with default values have been created. The following tables show the TC options for service ST[20]. As shown in Table VI specific groups of parameters have been created. Each TC[20,1] for requesting the report of the values of parameters contains a default number of related parameters.
+  As mentioned above not all TCs have configurable Arguments. Some pre-made TCs with default values have been created. The following tables show the TC options for service **ST[20]**. As shown in the bellow Table , specific groups of parameters have been created. Each **TC[20,1]** for requesting the report of the values of parameters contains a default number of related parameters.
 
 Telecommand | Description (number of parameters included)
 ---|---
@@ -283,7 +277,7 @@ TC[20,1]: reportBoardParameterValues | Board Related Parameters (4)
 TC[20,1]: reportMemoryParameterValues | Memory Related Parameters (5)
 TC[20,1]: reportTimeParameterValues | Time Related Parameter (1)
 
-List Of Parameters included in each group:
+List of Parameters included in each group:
 
 - **Gyroscope Related Parameters**:
     1. GyroscopeX
@@ -342,8 +336,7 @@ The Mission Database Section of the sidenav contains a list of all the Parameter
 All these files are included in src/main/main/yamcs/mdb folder.
 
 ### Preprocessor
-MyPacketPreprocessor class does some processing to all incoming data from each Data Link. Since incoming data is structured as a stream through the TCP ports, the Preprocessor splits each stream into separate packets automatically. This class is responsible for any error detection (and correction) and some basic information extraction from
-each packet such as:
+MyPacketPreprocessor class does some processing to all incoming data from each Data Link. Since incoming data is structured as a stream through the TCP ports, the Preprocessor splits each stream into separate packets automatically. This class is responsible for any error detection (and correction) and some basic information extraction from each packet such as:
 - Generation time
 - Sequence count
 - Packet length
