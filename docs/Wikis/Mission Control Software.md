@@ -1,12 +1,11 @@
 # OBC/ADCS campaign ‐ Mission Control System Manual
 
 ### Table of contents
-
-1. Introduction
-2. Telemetry-Telecommanding
-3. YAMCS-Board Communication
-4. Message Handling
-5. Backup Scripts
+1. [Introduction](#introduction)
+2. [Telemetry and Commanding](#telemetry-and-commanding)
+3. [YAMCS-Board Communication](#yamcs-board-communication)
+4. [Message Handling](#message-handling)
+5. [Backup Scripts](#backup-scripts)
 
 ### List of Abbreviations
 
@@ -43,7 +42,7 @@ This document describes the contents of the yamcs-instance project regarding the
 
 An important mention is that all TM and TC packets comply with the CCSDS Space Packet Protocol (CCSDS-132.0-B-2, CCSDS-232.0-B-3) and the ECSS-E-ST-70-41C standard and the structure of YAMCS follows the XTCE schema, with the exception of the constraints imposed by the YAMCS mission control software, to encode and decode packets.
 
-## Telemetry‐Commanding
+## Telemetry and Commanding
 
 Through YAMCS mission control Web Interface data concerning the status of the OBC and ADCS parameters can be visualized.
 To simply start the main YAMCS instance, run the following command:
@@ -373,6 +372,7 @@ prevention measure, we can:
 functionality is implemented by OBC.
 
 ## YAMCS-Board Communication
+
 The devboard can be connected with a PC using a USB interface. In order for YAMCS to receive the messages from the USB port, **MessageHandler.py** script has been created. It forwards the messages from the USB port to the TCP port of YAMCS and vice-versa. For the campaign, there will be 3 serial connections to and from the PC. YAMCS is currently configured to have 3 data links; OBC, ADCS and CAN BUS There are two methods to connect the devboard with a USB port:
 1. Using a USB cable connected to the debug port of the devboard. This is the default configuration and the usb port is listed as /dev/ttyACM0.
 2. Using a UART to USB adapter. Both RX and TX ports of the configured UART interface of the devboard are connected to TX and RX ports of the adapter respectively. The board will be listed as /dev/ttyUSB0.
@@ -388,6 +388,7 @@ is made in order to keep track of which serial port corresponds to which board. 
 changess are documented in the next section.
 
 ## Message Handling
+
 Messages are handled with threads. Two types of threads are implemented, one listens to YAMCS and forwards the message to a serial port and the other does the exact opposite. Each serial and TCP port can be read by exactly **one** thread and written by **one** thread only (not nescessarily the same).
 
 You can define the serial port and the TCP port using the **MessageHandler** class constructor. Please refer to the class documentation in the script. After all threads are finalized, simply run:
@@ -400,7 +401,8 @@ All TMs sent by the boards and TCs sent by Yamcs will be printed in the terminal
 
 If you attempt to start a new YAMCS listener thread and another one already exists you will either get a "connection refused error" on either of the two threads. The same thing will happen if you try to create a new MCU listener thread for a port that is already being read by another thread (or another application such as Minicom); you will get a "device unavailable" error
 
-## Backup Script
+## Backup Scripts
+
 YAMCS has implemented a local database system, storing all TMs, TCs, parameters, alarms , events etc. We should be able to backup all this information, in case something goes wrong. This is achieved using a Google Drive command line interface called gdrive, which can be used to upload a folder and all it's contents to a specified google drive location.The backups are differential, meaning only the edited/new files are uploaded, and are created at a configurable, in the script, time interval. We cannot use AcubeSat's Google Drive space, since it is shared and the script cannot get access to it. That's we have created a new account under the name of yamcs.backup.acubesat@gmail.com. This account has already been used for testing, so in order for the setup to be successful, a **NEW** folder should be created and used as a backup storage location. The steps required are:
 1. Read [readme.md](https://gitlab.com/acubesat/ops/yamcs-instance/-/blob/main/backup-scripts/readme.md) in yamcs-instance/backup-scripts.
 2. Login to the account using the login credentials stored at [Nextcloud](https://cloud.spacedot.gr/index.php/apps/files/?dir=/AcubeSAT/Subsystems/OPS%20-%20Spacecraft%20Operations/YAMCS&fileid=391449).
