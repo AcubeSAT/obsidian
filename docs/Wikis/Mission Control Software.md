@@ -109,55 +109,55 @@ five sub-folders:
 An overview of all Campaign parameters and their IDs is shown is shown in the following Tables.
 
 ADCS Parametrs:
-  Parameter ID | Description
-  --- | ---
-  1013 | Magnetometer Raw Values x
-  1014 | Magnetometer Raw Values y
-  1015 | Magnetometer Raw Values z
-  1016 | Magnetometer Frequency
-  1017 | Magnetometer cycle count on x
-  1018 | Magnetometer cycle count on y
-  1019 | Magnetometer cycle count on z
-  1020 | Magnetometer self-test register
-  1043 | Gyro measurements x
-  1044 | Gyro measurements y
-  1045 | Gyro measurements z
-  1089 | Gyroscope X temperature
-  1090 | Gyroscope Y temperature
-  1091 | Gyroscope Z temperature
-  1092 | ADCS board Temperature 1
-  1093 | ADCS board Temperature 2
-  1158 | Magnetometer axis x sign
-  1159 | Magnetometer axis y sign
-  1160 | Magnetometer axis z sign
-  1164 | Gyro axis x sign
-  1165 | Gyro axis y sign
-  1166 | Gyro axis z sign
-  1189 | Gyro bias x
-  1190 | Gyro bias y
-  1191 | Gyro bias z
-  1218 | ADCS MCU temperature
-  1220 | ADCS MCU boot counter
-  1221 | ADCS MCU On-Board Time
-  1224 | ADCS MCU Systick
+  | Parameter ID | Description                     |
+  | ------------ | ------------------------------- |
+  | 1013         | Magnetometer Raw Values x       |
+  | 1014         | Magnetometer Raw Values y       |
+  | 1015         | Magnetometer Raw Values z       |
+  | 1016         | Magnetometer Frequency          |
+  | 1017         | Magnetometer cycle count on x   |
+  | 1018         | Magnetometer cycle count on y   |
+  | 1019         | Magnetometer cycle count on z   |
+  | 1020         | Magnetometer self-test register |
+  | 1043         | Gyro measurements x             |
+  | 1044         | Gyro measurements y             |
+  | 1045         | Gyro measurements z             |
+  | 1089         | Gyroscope X temperature         |
+  | 1090         | Gyroscope Y temperature         |
+  | 1091         | Gyroscope Z temperature         |
+  | 1092         | ADCS board Temperature 1        |
+  | 1093         | ADCS board Temperature 2        |
+  | 1158         | Magnetometer axis x sign        |
+  | 1159         | Magnetometer axis y sign        |
+  | 1160         | Magnetometer axis z sign        |
+  | 1164         | Gyro axis x sign                |
+  | 1165         | Gyro axis y sign                |
+  | 1166         | Gyro axis z sign                |
+  | 1189         | Gyro bias x                     |
+  | 1190         | Gyro bias y                     |
+  | 1191         | Gyro bias z                     |
+  | 1218         | ADCS MCU temperature            |
+  | 1220         | ADCS MCU boot counter           |
+  | 1221         | ADCS MCU On-Board Time          |
+  | 1224         | ADCS MCU Systick                |
 
 OBC Parameters:
-  Parameter ID | Description
-  --- | ---
-  5000 | OBDH board Temperature 1
-  5001 | OBDH board Temperature 2
-  5002 | OBC MCU temperature
-  5004 | OBC MCU boot counter
-  5012 | OBC On-Board Time
-  5014 | OBC NAND currently used memory partition
-  5017 | OBC MCU Systick
-  5018 | CAN bus 1 load
-  5019 | CAN bus 2 load
-  5020 | Which CAN bus active
-  5023 | OBC NAND FLASH threshold
-  5024 | OBC MRAM threshold
-  5025 | OBC NAND FLASH ON
-  5026 | OBC MRAM ON
+  | Parameter ID | Description                              |
+  | ------------ | ---------------------------------------- |
+  | 5000         | OBDH board Temperature 1                 |
+  | 5001         | OBDH board Temperature 2                 |
+  | 5002         | OBC MCU temperature                      |
+  | 5004         | OBC MCU boot counter                     |
+  | 5012         | OBC On-Board Time                        |
+  | 5014         | OBC NAND currently used memory partition |
+  | 5017         | OBC MCU Systick                          |
+  | 5018         | CAN bus 1 load                           |
+  | 5019         | CAN bus 2 load                           |
+  | 5020         | Which CAN bus active                     |
+  | 5023         | OBC NAND FLASH threshold                 |
+  | 5024         | OBC MRAM threshold                       |
+  | 5025         | OBC NAND FLASH ON                        |
+  | 5026         | OBC MRAM ON                              |
 
 - **pus**: Contains all the packet header parameters, both primary and secondary,such as *time,sequence count, message type* and *service type*. Their values get updated with the reception of **every TM**, since all incoming packets contain the headers.
 
@@ -173,14 +173,14 @@ file in yamcs-instance project.
 #### Commanding
 
 Only a few ECSS Services will be needed for the Environmental Testing. Their definition and location in the Commanding Section's sub-folders is shown in Table IV.
-Service | Location
----|---
-ST[03]: Housekeeping | pus
-ST[04]: Parameter statistics reporting | pus
-ST[11]: Time-based scheduling | time-based-scheduling
-ST[17]: Test | pus
-ST[20]: Parameter management | pus, report-values, set-values
-ST[128]: Log Messages | pus
+| Service                                | Location                       |
+| -------------------------------------- | ------------------------------ |
+| ST[03]: Housekeeping                   | pus                            |
+| ST[04]: Parameter statistics reporting | pus                            |
+| ST[11]: Time-based scheduling          | time-based-scheduling          |
+| ST[17]: Test                           | pus                            |
+| ST[20]: Parameter management           | pus, report-values, set-values |
+| ST[128]: Log Messages                  | pus                            |
 
 Based on the desirable TC to be sent, the user should navigate to the respective subfolder to locate it and then send it.
 
@@ -267,15 +267,15 @@ List Of Parameters included in each structure:
 - **Default TCs**
   As mentioned above not all TCs have configurable Arguments. Some pre-made TCs with default values have been created. The following tables show the TC options for service **ST[20]**. As shown in the bellow Table , specific groups of parameters have been created. Each **TC[20,1]** for requesting the report of the values of parameters contains a default number of related parameters.
 
-Telecommand | Description (number of parameters included)
----|---
-TC[20,1]: reportGyroParameterValues | Gyroscope Related Parameters (6)
-TC[20,1]: reportMagnetometerParameterValues | Magnetometer Related Parameters (8)
-TC[20,1]: reportMcuParameterValues |MCU Related Parameters (7)
-TC[20,1]: reportCanParameterValues |CAN Related Parameters (3)
-TC[20,1]: reportBoardParameterValues | Board Related Parameters (4)
-TC[20,1]: reportMemoryParameterValues | Memory Related Parameters (5)
-TC[20,1]: reportTimeParameterValues | Time Related Parameter (1)
+| Telecommand                                 | Description (number of parameters included) |
+| ------------------------------------------- | ------------------------------------------- |
+| TC[20,1]: reportGyroParameterValues         | Gyroscope Related Parameters (6)            |
+| TC[20,1]: reportMagnetometerParameterValues | Magnetometer Related Parameters (8)         |
+| TC[20,1]: reportMcuParameterValues          | MCU Related Parameters (7)                  |
+| TC[20,1]: reportCanParameterValues          | CAN Related Parameters (3)                  |
+| TC[20,1]: reportBoardParameterValues        | Board Related Parameters (4)                |
+| TC[20,1]: reportMemoryParameterValues       | Memory Related Parameters (5)               |
+| TC[20,1]: reportTimeParameterValues         | Time Related Parameter (1)                  |
 
 List of Parameters included in each group:
 
